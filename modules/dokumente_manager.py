@@ -267,6 +267,7 @@ class DokumenteManager:
             
         if self.ocr_enabled.get():
             result += f"\nOCR aktiviert (Sprache: {self.ocr_language.get()})"
+            result += "\nHinweis: OCR-Integration in Entwicklung"
             
         messagebox.showinfo("Analyseergebnis", result)
         
@@ -285,5 +286,5 @@ class DokumenteManager:
             "Verarbeitung",
             f"Dokumente werden mit {len(self.rules)} Regel(n) verarbeitet.\n\n"
             f"OCR: {'Aktiviert' if self.ocr_enabled.get() else 'Deaktiviert'}\n"
-            f"Hinweis: Dies ist eine Demofunktion."
+            f"Hinweis: Dies ist eine Demofunktion. OCR-Integration in Entwicklung."
         )

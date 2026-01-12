@@ -212,9 +212,9 @@ class DateienManager:
                             dest_dir = os.path.join(target, ext.upper())
                             os.makedirs(dest_dir, exist_ok=True)
                             
-                            # Datei verschieben
+                            # Datei verschieben (nur wenn noch nicht am Zielort)
                             dest_path = os.path.join(dest_dir, file)
-                            if source != target or not os.path.exists(dest_path):
+                            if source != target or os.path.basename(file_path) != file or not os.path.exists(dest_path):
                                 shutil.move(file_path, dest_path)
                                 organized_count += 1
                                 

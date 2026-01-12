@@ -309,6 +309,7 @@ class KategorieManager:
             return
             
         # Einfache Klassifikation basierend auf Begriff-Matching
+        # Für bessere Performance bei großen Texten könnte Tokenisierung verwendet werden
         scores = {}
         for category, terms in self.categories.items():
             score = sum(1 for term in terms if term in text)
