@@ -1,0 +1,24 @@
+# Datei_M Requirements
+# Core dependencies for the desktop application
+
+# GUI (tkinter is part of Python standard library, no need to install)
+# tkinter is included with Python
+
+# For future OCR integration in Dokumente Manager
+# pytesseract==0.3.10
+# Pillow==10.0.0
+
+# For regex operations (already in standard library)
+# re is included with Python
+
+# For JSON handling (already in standard library)
+# json is included with Python
+
+# Optional: For enhanced file operations
+pathlib2==2.3.7; python_version < '3.4'
+
+# Optional: For future PDF handling
+# PyPDF2==3.0.1
+
+# Note: This application uses mainly Python standard library components
+# to keep dependencies minimal. Uncomment optional dependencies as needed.
